@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanny Brito - Studio Beauty</title>
+    <style>
+        :root {
+            --bg-color: #fff;
+            --text-color: #333;
+            --primary-color: #ff69b4;
+            --secondary-color: #f0f0f0;
+            --card-bg: #fff;
+        }
+
+        .dark-theme {
+            --bg-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --primary-color: #ff69b4;
+            --secondary-color: #2a2a2a;
+            --card-bg: #2a2a2a;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .services, .gallery, .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ff4da6;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        #theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <h1>Lanny Brito</h1>
+            <img src="img/perfil.jpg" alt="Lanny Briito" class="profile-img">
+            <h2>Studio Beauty</h2>
+            <p>Olá! Sou Lanny Brito, especialista em Maquiagem e design de sobrancelhas. Com anos de experiência, estou aqui para realçar sua beleza natural e aumentar sua confiança através das makes e sobrancelhas perfeitas.</p>
+        </section>
+
+        <section id="servicos">
+            <h2>Nossos Serviços</h2>
+            <div class="services">
+                <div class="card">
+                    <h3>Design Personalizado</h3>
+                    <p>Mapeamento respeitando o formato natural das sobrancelhas, realçando e valorizando o olhar através do design.</p>
+                </div>
+                <div class="card">
+                    <h3>Design Com Henna</h3>
+                    <p>Realizamos o design personalizado com aplicação de henna, que tem como objetivo principal tingir a pele corrigindo falhas indesejáveis. Durabilidade de 3 a 8 dias..</p>
+                </div>
+                <div class="card">
+                    <h3>Micropigmentação Shadow</h3>
+                    <p>Uma técnica mais natural, esfumada, podendo ser mais clarinha ou mais marcada, indolor e muito utilizada por quem é acostumada a usar henna para preencher as falhas. Duração de 2 a 3 anos.</p>
+                </div>
+                <div class="card">
+                    <h3>Brow Lamination</h3>
+                    <p>Técnica que tem como objetivo principal aumentar a espessura das sobrancelhas de forma natural. Seu resultado é de sobrancelhas mais volumosas e sempre alinhadas, preenchendo falhas indesejáveis, você tem a liberdade de escolher se deseja os fios mais arrepiados ou alinhados. Durabilidade de até 2 meses dependendo do ciclo de crescimento dos fios.</p>
+                </div>
+                <div class="card">
+                    <h3>Micropigmentação fio a fio híbrida</h3>
+                    <p>Micropigmentação feita no tebori, fios realistas desenhandos no inicio da sobrancelha que seja falhada e o restante da sobrancelhas esfumada. Ideal para pessoas que tem poucos fios e gosta da frente mais naturalzinha.</p>
+                </div>
+                <div class="card">
+                    <h3>Depilação Buço e Axila</h3>
+                    <p>Procedimento realizado na cera, e ao finalizar uma massagem com loção calmante. De brinde uma esfoliação labial com um Lip Oil para remover células mortas e devolver a hidratação dos lábios.</p>
+                </div>
+                <div class="card">
+                    <h3>Make Clean "Dia"</h3>
+                    <p>Pele, colo, batom, técnica de olhos sem gatinho, sem cílios.</p>
+                </div>
+                 <div class="card">
+                    <h3>Make Clean "Noite"</h3>
+                    <p>Pele mais marcada, batom, técnica de esfumado podendo conter delineado esfumado e cílios.</p>
+                </div>
+                 <div class="card">
+                    <h3>Make Top Evento</h3>
+                    <p>Make elaborada, podendo ter qualquer delineado, qualquer técnica, para formatura, casamento, balada etc...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <h2>Galeria de Trabalhos</h2>
+            <div class="gallery">
+                <img src="/img/make1.jpg" alt="Trabalho 1">
+                <img src="img/make2.jpg" alt="Trabalho 2">
+                <img src="img/make3.jpg" alt="Trabalho 3">
+                <img src="img/sobrancelhas1.jpg" alt="Trabalho 4">
+                <img src="img/sobrancelhas2.jpg" alt="Trabalho 5">
+                <img src="img/sobrancelhas4.jpg" alt="Trabalho 6">
+            </div>
+        </section>
+
+        <section id="depoimentos">
+            <h2>O que dizem nossos clientes</h2>
+            <div class="testimonials">
+                <div class="card">
+                    <p>"Eu amei e todos que estavam comigo amaram também e perguntaram quem fez, com certeza te indiquei, obrigada. Deus te abençoe."</p>
+                    <p><strong>- Isabella Doria</strong></p>
+                </div>
+                <div class="card">
+                    <p>"A make foi feita às 16:00hrs da tarde, peguei chuva, chorei e ficou intacta o evento inteiro."</p>
+                    <p><strong>- Rahuany R.</strong></p>
+                </div>
+                <div class="card">
+                    <p>"Amei a maquiagem haha ficou intacta até de manhã, ganhou uma cliente agora kk Parabéns pelo trabalho impecável."</p>
+                    <p><strong>- Gabriela G.</strong></p>
+                </div>
+                <div class="card">
+                    <p>"Amei seu trabalho, arrasei nas fotos da formatura, make top cheguei em casa do mesmo jeito que fui, perfeito, excelente profissional você."</p>
+                    <p><strong>- Karol</strong></p>
+                </div>
+                <div class="card">
+                    <p>"Oi, Tudo bem? amei a maquiagem, ficou perfeita, muito obrigada."</p>
+                    <p><strong>- Eliz Alves</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <p>Agende seu horário ou tire suas dúvidas:</p>
+            <p><strong>Telefone: (21) 96741-7251</strong></p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/5521967417251"><button class="btn">WhatsApp</button></a>
+                <a href="https://www.instagram.com/lanybritobeauty?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><button class="btn">Instagram</button></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Lanny Brito Maquiagem & Design de Sobrancelhas. Todos os direitos reservados.</p>
+    </footer>
+
+    <button id="theme-toggle">🌓</button>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+        });
+    </script>
+</body>
+</html>
